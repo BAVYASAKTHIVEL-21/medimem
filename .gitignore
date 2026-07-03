@@ -1,0 +1,11 @@
+medimem/frontend/node_modules/
+medimem/frontend/.next/
+medimem/backend/venv/
+medimem/backend/__pycache__/
+medimem/backend/**/__pycache__/
+*.pyc
+*.so
+medimem/backend/.env
+medimem/backend/settings.json
+.env
+*.env
