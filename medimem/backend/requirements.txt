@@ -6,6 +6,6 @@ groq==0.4.2
 openai==1.6.1
 anthropic==0.8.1
 python-dotenv==1.0.0
-cognee==1.0.1
+cognee
 aiohttp==3.9.1
 pydantic==2.5.2
