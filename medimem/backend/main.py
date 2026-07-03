@@ -87,3 +87,4 @@ async def health():
         "backend": "ok",
         "cognee":  "connected" if await cognee_health_check() else "disconnected",
     }
+
