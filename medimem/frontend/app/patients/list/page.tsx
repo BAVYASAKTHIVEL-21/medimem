@@ -202,19 +202,17 @@ export default function PatientListPage() {
                     <span className="flex items-center gap-1"><IconActivity size={11} /> {p.meds?.length||0} meds</span>
                   </div>
 
-                  {/* Memory bar */}
                   <div className="mb-4">
-                    <div className="flex justify-between mb-1.5">
-                      <span className="text-[9px] text-ink-muted uppercase tracking-wider">Cognee memory</span>
-                      <span className="text-[11px] font-bold" style={{ color: p.memory_pct>0?"#00d4a0":"#4a6080" }}>
-                        {p.memory_pct||0}%
+                   <div className="flex justify-between items-center">
+                     <span className="text-[9px] text-ink-muted uppercase tracking-wider">
+                       Cognee Memory
+                      </span>
+
+                      <span className="text-[11px] font-semibold text-teal">
+                        {(p.docs?.length || 0)} Document Indexed ✓
                       </span>
                     </div>
-                    <div className="h-1 rounded-full bg-line-strong overflow-hidden">
-                      <div className="h-full rounded-full bg-teal transition-all duration-700"
-                        style={{ width:`${p.memory_pct||0}%` }} />
                     </div>
-                  </div>
 
                   {/* Actions */}
                   <div className="flex gap-2 pt-3 border-t border-line">
