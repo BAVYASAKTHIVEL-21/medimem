@@ -1,4 +1,6 @@
-const BASE = "http://localhost:8000";
+const BASE =
+  process.env.NEXT_PUBLIC_API_URL ||
+  "https://medimem-production.up.railway.app";
 
 async function req<T>(method: string, path: string, body?: unknown, isForm = false): Promise<T> {
   const headers: Record<string,string> = {};

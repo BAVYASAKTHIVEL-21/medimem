@@ -32,7 +32,7 @@ export default function PatientListPage() {
       const data = await api.listPatients();
       setPatients(data.patients || []);
     } catch {
-      setError("Cannot connect to backend. Is it running on port 8000?");
+      setError("Cannot connect to backend");
     } finally {
       setLoading(false);
     }
