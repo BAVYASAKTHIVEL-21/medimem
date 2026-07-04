@@ -38,7 +38,7 @@
     "patient_name": "Ramesh Kumar",
     "type": "warning",
     "title": "Risk detected \u2014 Ramesh Kumar",
-    "desc": "**Health\u2011risk warnings & conditions that need close attention**\n\n- **Chronic Kidney Disease\u202fStage\u202f3** \u2013 eGFR\u202f42\u202fmL/min; progressive loss of renal function.  \n- **Type\u202f2 Diabetes Mellitus (poorly controlled)** \u2013 HbA1c\u202f8.4\u202f% (target\u202f<\u202f7\u202f%); raises risk of further kidney damage and cardiovascular event",
+    "desc": "**Health\u2011risk warnings & s that need close attention**\n\n- **Chronic Kidney Disease\u202fStage\u202f3** \u2013 eGFR\u202f42\u202fmL/min; progressive loss of renal function.  \n- **Type\u202f2 Diabetes Mellitus (poorly controlled)** \u2013 HbA1c\u202f8.4\u202f% (target\u202f<\u202f7\u202f%); raises risk of further kidney damage and cardiovascular event",
     "source": "upload",
     "read": true,
     "created_at": "2026-07-03T08:19:27.640833"
@@ -71,7 +71,7 @@
     "patient_name": "Priya_Nair",
     "type": "warning",
     "title": "Risk detected \u2014 Priya_Nair",
-    "desc": "**Health\u2011risk warnings & conditions that need attention**\n\n- **Aspirin\u202f/\u202fall NSAIDs** \u2013 absolute contraindication; causes life\u2011threatening bronchospasm (aspirin\u2011exacerbated respiratory disease).  \n- **Asthma (moderate\u2011persistent, poorly controlled)** \u2013 peak flow\u202f65\u202f% (\u2193\u202f\u2192\u202frisk of exacerbation).  \n  ",
+    "desc": "**Health\u2011risk warnings & s that need attention**\n\n- **Aspirin\u202f/\u202fall NSAIDs** \u2013 absolute contraindication; causes life\u2011threatening bronchospasm (aspirin\u2011exacerbated respiratory disease).  \n- **Asthma (moderate\u2011persistent, poorly controlled)** \u2013 peak flow\u202f65\u202f% (\u2193\u202f\u2192\u202frisk of exacerbation).  \n  ",
     "source": "upload",
     "read": true,
     "created_at": "2026-07-03T08:11:12.320074"
@@ -137,7 +137,7 @@
     "patient_name": "Priya Nair",
     "type": "warning",
     "title": "Risk detected \u2014 Priya Nair",
-    "desc": "**Health\u2011risk warnings & conditions that need close attention**\n\n- **Moderate\u2011persistent asthma (poorly controlled)**\n  - Low peak\u2011flow\u202f=\u202f65\u202f% predicted \u2192 high risk of exacerbation.  \n  - **Avoid triggers:** dust, smoke, strong perfumes; use inhaler\u202f*before*\u202fexercise.  \n  - **Medication safety:** Me",
+    "desc": "**Health\u2011risk warnings & s that need close attention**\n\n- **Moderate\u2011persistent asthma (poorly controlled)**\n  - Low peak\u2011flow\u202f=\u202f65\u202f% predicted \u2192 high risk of exacerbation.  \n  - **Avoid triggers:** dust, smoke, strong perfumes; use inhaler\u202f*before*\u202fexercise.  \n  - **Medication safety:** Me",
     "source": "upload",
     "read": true,
     "created_at": "2026-07-03T07:10:59.346359"
@@ -170,7 +170,7 @@
     "patient_name": "Priya Nair",
     "type": "warning",
     "title": "Risk detected \u2014 Priya Nair",
-    "desc": "**Health\u2011risk warnings & conditions that need close attention**\n\n- **Asthma (moderate\u2011persistent, poorly controlled)**\n  - Low peak\u2011flow\u202f=\u202f65\u202f% predicted \u2192 high risk of exacerbation.  \n  - **Avoid triggers:** dust, smoke, strong perfumes, and any exercise without using the inhaler beforehand.  \n  - ",
+    "desc": "**Health\u2011risk warnings & s that need close attention**\n\n- **Asthma (moderate\u2011persistent, poorly controlled)**\n  - Low peak\u2011flow\u202f=\u202f65\u202f% predicted \u2192 high risk of exacerbation.  \n  - **Avoid triggers:** dust, smoke, strong perfumes, and any exercise without using the inhaler beforehand.  \n  - ",
     "source": "upload",
     "read": true,
     "created_at": "2026-07-03T06:57:46.611094"
@@ -203,7 +203,7 @@
     "patient_name": "Ananya Singh",
     "type": "warning",
     "title": "Risk detected \u2014 Ananya Singh",
-    "desc": "**Health\u2011risk warnings & conditions that need active monitoring for this patient**\n\n- **Hypothyroidism (TSH\u202f8.2\u202fmIU/L, free\u202fT4\u202f0.7\u202fng/dL)**\n  - \u2191Risk of fatigue, weight gain, dyslipidaemia, depression, and cardiac strain if under\u2011treated.  \n  - **Action:** Check TSH again in\u202f6\u202fweeks (as ordered); ad",
+    "desc": "**Health\u2011risk warnings & s that need active monitoring for this patient**\n\n- **Hypothyroidism (TSH\u202f8.2\u202fmIU/L, free\u202fT4\u202f0.7\u202fng/dL)**\n  - \u2191Risk of fatigue, weight gain, dyslipidaemia, depression, and cardiac strain if under\u2011treated.  \n  - **Action:** Check TSH again in\u202f6\u202fweeks (as ordered); ad",
     "source": "upload",
     "read": true,
     "created_at": "2026-07-03T06:36:36.835013"
@@ -225,7 +225,7 @@
     "patient_name": "Ananya Singh",
     "type": "critical",
     "title": "Critical detected \u2014 Ananya Singh",
-    "desc": "**Critical allergy in the record:**\u202fIodine\u202fcontrast\u2011dye allergy  \n\n**Why it\u2019s severe:**\u202fThe patient (Ananya\u202fSingh) had an **documented allergic reaction during a CT scan in\u202f2023** after exposure to iodine contrast. This reaction is classified as a **medical condition** and is listed as a **critical ",
+    "desc": "**Critical allergy in the record:**\u202fIodine\u202fcontrast\u2011dye allergy  \n\n**Why it\u2019s severe:**\u202fThe patient (Ananya\u202fSingh) had an **documented allergic reaction during a CT scan in\u202f2023** after exposure to iodine contrast. This reaction is classified as a **medical ** and is listed as a **critical ",
     "source": "upload",
     "read": true,
     "created_at": "2026-07-03T06:36:17.890984"

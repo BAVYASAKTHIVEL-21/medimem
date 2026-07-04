@@ -19,20 +19,65 @@ def clean_text(text: str) -> str:
 
 def classify_entity(text: str) -> tuple[str, str]:
     t = text.lower()
-    if any(w in t for w in ["diabetes","hypertension","asthma","disease","syndrome","thyroid","pcos","cancer","disorder","anaemia","deficiency","ckd","kidney","cardiac","coronary"]):
-        return "Condition", "#00d4a0"
-    if any(w in t for w in ["mg","mcg","tablet","capsule","metformin","levothyroxine","amlodipine","insulin","inhaler","atorvastatin","aspirin","vitamin","prescribed","drug","dose","medication"]):
-        return "Medication", "#50d4a0"
-    if any(w in t for w in ["allerg","penicillin","reaction","iodine","codeine","sulfa","bronchospasm","avoid","anaphylaxis"]):
-        return "Allergy", "#f0a030"
-    if any(w in t for w in ["hba1c","cholesterol","glucose","tsh","haemoglobin","egfr","creatinine","ferritin","ige","vitamin d","b12","iron","ldl","hdl","lab","result","test","level"]):
-        return "Lab Result", "#4090e0"
-    if any(w in t for w in ["bp","pressure","pulse","vital","spo2","bmi","weight","peak flow","mmhg"]):
-        return "Vital", "#4090e0"
-    if any(w in t for w in ["hospital","admit","discharg","surgery","episode","visit"]):
-        return "Episode", "#e05a3a"
-    return "Entity", "#8a9ab8"
 
+    if any(x in t for x in [
+        "male", "female", "blood type", "blood group",
+        "age", "yrs", "year", "gender"
+    ]):
+        return "Demographic", "#8b7ff5"
+
+    if any(x in t for x in [
+        "weight", "height", "bmi",
+        "bp", "pressure", "pulse",
+        "spo2", "mmhg"
+    ]):
+        return "Vital", "#4090e0"
+
+    if any(x in t for x in [
+        "hba1c", "glucose", "cholesterol",
+        "ldl", "hdl", "creatinine",
+        "egfr", "vitamin", "haemoglobin",
+        "ferritin", "tsh", "lab"
+    ]):
+        return "Lab Result", "#4090e0"
+
+    if any(x in t for x in [
+        "metformin", "insulin",
+        "amlodipine", "atorvastatin",
+        "tablet", "capsule",
+        "mg", "mcg", "drug",
+        "medication"
+    ]):
+        return "Medication", "#50d4a0"
+
+    if any(x in t for x in [
+        "allergy", "penicillin",
+        "iodine", "reaction",
+        "anaphylaxis"
+    ]):
+        return "Allergy", "#f0a030"
+
+    if any(x in t for x in [
+        "doctor", "dr ", "dr."
+    ]):
+        return "Doctor", "#00c2ff"
+
+    if any(x in t for x in [
+        "hospital", "clinic",
+        "medical centre", "department"
+    ]):
+        return "Hospital", "#e05a3a"
+
+    if any(x in t for x in [
+        "diabetes", "hypertension",
+        "asthma", "ckd",
+        "cancer", "thyroid",
+        "disease", "condition",
+        "syndrome"
+    ]):
+        return "Condition", "#00d4a0"
+
+    return "Entity", "#8a9ab8"
 
 def is_junk_label(part: str, patient_name: str) -> bool:
     """Filter out labels that are not meaningful medical entities."""
@@ -165,7 +210,7 @@ async def get_mindmap(patient_id: str):
                 continue
 
             seen.add(label_key)
-            node_type, color = classify_entity(cleaned)
+            node_type, color = classify_entity(part)
             node_id = f"node_{node_counter}"
             node_counter += 1
 
@@ -192,16 +237,19 @@ async def get_mindmap(patient_id: str):
                 "sub":     sub[:22] if sub else node_type,
                 "primary": False,
             })
-
             rel_map = {
-                "Condition":  "has condition",
-                "Medication": "prescribed",
-                "Allergy":    "allergic to",
-                "Vital":      "vital sign",
+                "Condition": "has condition",
+                "Medication": "takes",
                 "Lab Result": "lab result",
-                "Episode":    "had episode",
-                "Entity":     "related to",
+                "Vital": "vital",
+                "Demographic": "patient info",
+                "Doctor": "treated by",
+                "Hospital": "visited",
+                "Allergy": "allergic to",
+                "Episode": "clinical event",
+                "Entity": "related to",
             }
+
             relationships.append({
                 "from":  patient_id,
                 "to":    node_id,
