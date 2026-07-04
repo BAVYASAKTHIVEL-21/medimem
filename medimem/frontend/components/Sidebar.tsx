@@ -72,7 +72,9 @@ export default function Sidebar() {
   useEffect(() => {
     const fetchCount = async () => {
       try {
-        const res  = await fetch("http://localhost:8000/alerts/count");
+        const res = await fetch(
+        `${process.env.NEXT_PUBLIC_API_URL}/alerts/count`
+      );
         const data = await res.json();
         setAlertCount(data.unread || 0);
       } catch {}
