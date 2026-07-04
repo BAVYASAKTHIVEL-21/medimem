@@ -214,27 +214,14 @@ async def get_mindmap(patient_id: str):
             node_id = f"node_{node_counter}"
             node_counter += 1
 
-            # Get meaningful sub label from remaining text
-            sub = ""
-            remaining = cleaned.replace(part, "", 1).strip().lstrip(":-–,")
-            if remaining and len(remaining) > 3:
-                # Clean and take first meaningful phrase
-                sub_parts = re.split('[,;]', remaining)
-                for sp in sub_parts:
-                    sp = sp.strip()
-                    # Skip patient name in sub
-                    if patient["name"].lower().replace("_"," ") in sp.lower():
-                        continue
-                    if len(sp) > 3 and len(sp) < 30:
-                        sub = clean_text(sp)
-                        break
+            sub = node_type
 
             nodes.append({
                 "id":      node_id,
                 "label":   part[:28].replace("_"," "),
                 "type":    node_type,
                 "color":   color,
-                "sub":     sub[:22] if sub else node_type,
+                "sub":     sub,
                 "primary": False,
             })
             rel_map = {
