@@ -26,7 +26,7 @@ function formatMessage(text: string): string {
 function MessageText({ text }: { text: string }) {
   const clean = formatMessage(text);
   const lines = clean.split(/\n/).filter(l => l.trim());
-  
+
   return (
     <div style={{ fontSize: 13, lineHeight: 1.6 }}>
       {lines.map((line, i) => {
