@@ -3,7 +3,7 @@ main.py — MediMem AI Backend
 Loads saved API keys from settings.json on startup.
 """
 
-from fastapi import FastAPI
+from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
 from dotenv import load_dotenv
 import os, json
@@ -43,13 +43,14 @@ app = FastAPI(
     version="1.0.0",
 )
 
-allow_origins=[
-    "http://localhost:3000",
-    "http://127.0.0.1:3000",
-
-    "https://medimem.vercel.app",
-    "https://medimem-m2lx8mewm-bavyasakthivel21-6805s-projects.vercel.app",
-]
+# ── CORS — allow all Vercel + localhost ───────────────────
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # Allow all origins — safe since we use API keys for auth
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 app.include_router(patients_router)
 app.include_router(upload_router)
@@ -77,14 +78,19 @@ async def startup():
 
 @app.get("/")
 async def root():
-    return {"app": "MediMem AI Backend", "status": "running"}
+    return {
+        "app":     "MediMem AI Backend",
+        "status":  "running",
+        "version": "1.0.0",
+    }
 
 
 @app.get("/health")
 async def health():
     from cognee_client import cognee_health_check
+    cognee_ok = await cognee_health_check()
     return {
         "backend": "ok",
-        "cognee":  "connected" if await cognee_health_check() else "disconnected",
+        "cognee":  "connected" if cognee_ok else "disconnected",
+        "llm":     os.getenv("LLM_PROVIDER", "groq"),
     }
-
