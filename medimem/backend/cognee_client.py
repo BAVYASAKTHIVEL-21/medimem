@@ -149,4 +149,3 @@ async def cognee_forget(patient_id: str):
     except Exception as e:
         print(f"[Cognee] forget failed: {e}")
         raise
-
