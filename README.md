@@ -93,13 +93,15 @@ N --> K
 | **LLM** | Groq _(also supports OpenAI, Anthropic, Mistral, Together, Custom)_ |
 | **Deployment** | Vercel (frontend) · Railway (backend) |
 
-## Access here
+## Quick links
 
-https://medimem.vercel.app
+<p align="center">
 
-## Youtube
+<a href="https://medimem.vercel.app"><strong>Live App</strong></a> •
+<a href="https://medium.com/@bavyasakthivel21/medimem-ai-great-care-begins-where-memory-never-ends-78dfa7ef34c7"><strong>Medium Blog</strong></a> •
+<a href="https://youtu.be/LYQI9mxYHYM"><strong>Demo Video</strong></a>
 
-## Blog
+</p>
 
 ## Built For
 
