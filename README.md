@@ -1,8 +1,17 @@
-# MediMem AI
+<img align="right" width="260" src="./medimem/assets/doc.gif" alt="MediMem AI Assistant"/>
+
+# 🩺🧠 MediMem AI
 
 > **Great Care Begins Where Memory Never Ends.**
 
 A persistent AI memory assistant for doctors, powered by **Cognee Cloud's Knowledge Graph**.
+
+<p>
+<a href="https://medimem.vercel.app">Live App</a> •
+<a href="https://medium.com/@bavyasakthivel21/medimem-ai-great-care-begins-where-memory-never-ends-78dfa7ef34c7">Blog</a> •
+<a href="https://youtu.be/LYQI9mxYHYM">Demo</a>
+</p>
+<br clear="right"/>
 
 ## The Problem
 
@@ -19,7 +28,7 @@ MediMem AI gives every doctor a persistent AI memory for every patient using Cog
 ```mermaid
 flowchart LR
 
-subgraph Frontend["🌐 Frontend (Next.js)"]
+subgraph Frontend["Frontend (Next.js)"]
 A[Doctor Login]
 B[Patients]
 C[Upload Documents]
@@ -92,16 +101,6 @@ N --> K
 | **Memory** | Cognee Cloud (V2 API) |
 | **LLM** | Groq _(also supports OpenAI, Anthropic, Mistral, Together, Custom)_ |
 | **Deployment** | Vercel (frontend) · Railway (backend) |
-
-## Quick links
-
-<p align="center">
-
-<a href="https://medimem.vercel.app"><strong>Live App</strong></a> •
-<a href="https://medium.com/@bavyasakthivel21/medimem-ai-great-care-begins-where-memory-never-ends-78dfa7ef34c7"><strong>Medium Blog</strong></a> •
-<a href="https://youtu.be/LYQI9mxYHYM"><strong>Demo Video</strong></a>
-
-</p>
 
 ## Built For
 
