@@ -1,6 +1,6 @@
 <img align="right" width="260" src="./medimem/assets/doc.gif" alt="MediMem AI Assistant"/>
 
-# 🩺🧠 MediMem AI
+# MediMem AI
 
 > **Great Care Begins Where Memory Never Ends.**
 
