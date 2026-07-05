@@ -186,6 +186,16 @@ export default function PatientListPage() {
                     </div>
                   </div>
 
+                  {/* Conditions */}
+                  <div className="flex gap-1.5 flex-wrap mb-3">
+                    {p.conditions?.length > 0
+                      ? p.conditions.map((c:string) => (
+                          <span key={c} className="text-[10px] bg-bg-input text-ink-soft px-2.5 py-0.5 rounded-full border border-line-strong">{c}</span>
+                        ))
+                      : <span className="text-[10px] text-ink-muted italic">No conditions recorded</span>
+                    }
+                  </div>
+
                   {/* Stats */}
                   <div className="flex gap-4 mb-3 text-[10px] text-ink-muted">
                     <span className="flex items-center gap-1"><IconDatabase size={11} /> {p.docs?.length||0} docs</span>
