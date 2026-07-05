@@ -202,18 +202,6 @@ export default function PatientListPage() {
                     <span className="flex items-center gap-1"><IconActivity size={11} /> {p.meds?.length||0} meds</span>
                   </div>
 
-                  {/* Cognee memory status */}
-                  <div className="mb-4">
-                    <div className="flex justify-between items-center">
-                      <span className="text-[9px] text-ink-muted uppercase tracking-wider">
-                        Cognee Memory
-                      </span>
-                      <span className="text-[11px] font-semibold text-teal">
-                        {(p.docs?.length || 0)} Document Indexed ✓
-                      </span>
-                    </div>
-                  </div>
-
                   {/* Actions */}
                   <div className="flex gap-2 pt-3 border-t border-line">
                     <button onClick={e=>{e.stopPropagation();selectPatient(p);}}
